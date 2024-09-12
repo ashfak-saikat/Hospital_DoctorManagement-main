@@ -1,0 +1,36 @@
+
+<div class="register-tab">
+<div class="container">
+  <h2 class="text-center">Lab Test List</h2>
+  <div *ngIf="labTest.length === 0">
+      No Lab Test currently in your List.
+  </div>
+  <div class="" *ngIf="labTest.length > 0">
+  <table class="table table-bordered table-striped text-center" border="1">
+    <thead>
+      <tr>
+        <th>
+           SKU
+        </th>
+        <th>
+            Test Name
+        </th>
+        <th>
+          Price
+        </th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let doc of labTest">
+        <td>{{doc?.test_name}}</td>
+        <td>{{doc?.test_sku}}</td>
+        <td>{{doc?.price}}</td>
+        <th>
+            <button (click)="onUpdate(doc)">Edit</button>&nbsp;&nbsp;&nbsp;
+            <button (click)="onDelete(doc)">Delete</button>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="HMSName">
+    <marquee direction="right" scrollamount="10">
+        <h1>Apollo HOSPITALS</h1>
+    </marquee>
+</div>
+<div class="main">
+    <div><img  src="../../../assets/images/hospital.png" width="10%" height="90%"></div>
+    <div  (click)="gotourl('')" [class.selected]="url === '/'">Home</div>
+    <div [matMenuTriggerFor]="loginMenu" class="user-name-item">
+      <div>Login<mat-icon>expand_more</mat-icon></div>
+    </div>
+    <div [matMenuTriggerFor]="servicesMenu" class="user-name-item">
+      <div>Our Services<mat-icon>expand_more</mat-icon></div>
+    </div>
+    <div (click)="gotourl('about-us')" [class.selected]="url === '/about-us'">About Us</div>
+    <div (click)="gotourl('contact-us')" [class.selected]="url === '/contact-us'">Contact Us</div>
+</div>
+<mat-menu #loginMenu="matMenu">
+  <button (click)="gotourl('admin-login')" [class.selected]="url === '/admin-login'" mat-menu-item>AdminLogin</button>
+  <button (click)="gotourl('doctor-login')" [class.selected]="url === '/doctor-login'" mat-menu-item>DoctorLogin</button>
+  <button (click)="gotourl('patient-login')" [class.selected]="url === '/patient-login'" mat-menu-item>PatientLogin</button>
+</mat-menu>
+
+<mat-menu #servicesMenu="matMenu">
+  <button (click)="gotourl('doctors')" [class.selected]="url === '/doctors'" mat-menu-item>Appointment Booking</button>
+  <button (click)="gotourl('ambulance')" [class.selected]="url === '/ambulance'" mat-menu-item>Ambulance Booking</button>
+  <button (click)="gotourl('rooms')" [class.selected]="url === '/rooms'" mat-menu-item>Room Booking</button>
+  <button (click)="gotourl('rooms')" [class.selected]="url === '/lab_tests'" mat-menu-item>Lab Test Booking</button>
+</mat-menu>

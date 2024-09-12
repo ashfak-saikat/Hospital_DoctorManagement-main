@@ -1,0 +1,133 @@
+
+
+<!-- Register with design -->
+
+<section class="h-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-12">
+              <div class="card-body p-md-5 black">
+                <h1 class="text-center">Rooms Service</h1>
+                <h3 class="text-uppercase">Rooms Detail</h3>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="number" min="0" [(ngModel)]="non_ac_ward" class="form-control form-control-lg" />
+                      <label class="form-label" for="non_ac_ward">Non AC Ward</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="number" min="0" [(ngModel)]="ac_ward" class="form-control form-control-lg" />
+                      <label class="form-label" for="ac_ward">AC Ward</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="number" min="0" [(ngModel)]="ac_cabin" class="form-control form-control-lg" />
+                      <label class="form-label" for="ac_cabin">Non AC Cabin </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="number" min="0" [(ngModel)]="non_ac_cabin" class="form-control form-control-lg" />
+                      <label class="form-label" for="non_ac_cabin">AC Cabin</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="number" min="0" [(ngModel)]="ccu_room" class="form-control form-control-lg" />
+                      <label class="form-label" for="ccu_room">CCU</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="number" min="0" [(ngModel)]="icu_room" class="form-control form-control-lg" />
+                      <label class="form-label" for="icu_room">ICU</label>
+                    </div>
+                  </div>
+                   <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="datetime-local" [(ngModel)]="schedule" class="form-control form-control-lg" />
+                      <label class="form-label" for="schedule">Schedule</label>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="text-uppercase">Contact Detail</h3>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="contact_name" class="form-control form-control-lg" />
+                      <label class="form-label" for="contact_name">Contact Person name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="contact_phone" class="form-control form-control-lg" />
+                      <label class="form-label" for="contact_phone">Contact Person Phone</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="house_no" class="form-control form-control-lg" />
+                      <label class="form-label" for="house_no">House No.</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="road_no" class="form-control form-control-lg" />
+                      <label class="form-label" for="road_no">Road No. / Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="block_no" class="form-control form-control-lg" />
+                      <label class="form-label" for="block_no">Block No.</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="sector_no" class="form-control form-control-lg" />
+                      <label class="form-label" for="sector_no">Sector No.</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="area" class="form-control form-control-lg" />
+                      <label class="form-label" for="area">Area</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" [(ngModel)]="additional_notes" class="form-control form-control-lg" />
+                      <label class="form-label" for="additional_notes">Additional notes</label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+
+                <!-- <div class="information">
+                  Password should contains 1 Uppercase, 1 Digit and should be 8 character long
+                </div> -->
+
+                <div class="d-flex justify-content-end pt-3">
+                  <!-- <button type="button" class="btn btn-light btn-lg">Reset all</button> -->
+                  <button (click)="rooms_booking()" class="btn btn-warning btn-lg ms-2">Confirm Booking</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

@@ -1,0 +1,79 @@
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Add Lab Test</h1>
+    </div>
+    <div class="main centered">
+
+        <table>
+            <tr>
+                <td class="label">Test Name</td>
+                <td>
+                    <input type="text" [(ngModel)]="test_name">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Test SKU</td>
+                <td>
+                    <input type="text" [(ngModel)]="test_sku">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Price</td>
+                <td>
+                    <input type="text" [(ngModel)]="price">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Status </td>
+                <td>
+                    <select [(ngModel)]="status">
+                      <option value="1">Pulished</option>
+                      <option value="0">Unpulished</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+              <td class="label">Test Time Starts</td>
+              <td>
+                  <input type="time" [(ngModel)]="test_time_start">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="label">Test Time End</td>
+              <td>
+                  <input type="time" [(ngModel)]="test_time_end">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="label">Report Delivery Time</td>
+              <td>
+                  <input type="time" [(ngModel)]="delivery_time">
+              </td>
+            </tr>
+
+            <tr>
+              <td>Required Preparation  </td>
+              <td>
+                <textarea [(ngModel)]="preparation"></textarea>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Test Description  </td>
+              <td>
+                <textarea [(ngModel)]="description"></textarea>
+              </td>
+            </tr>
+
+        </table>
+    </div>
+    <br />
+    <div class="centered"> <button (click)="createLabTest()" mat-raised-button  class="btn btn-warning btn-lg ms-2">Create Test</button></div>
+</div>

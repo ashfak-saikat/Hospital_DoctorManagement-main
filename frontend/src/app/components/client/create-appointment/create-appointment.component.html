@@ -1,0 +1,102 @@
+<br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Create Appointment</h1>
+    </div>
+    <div class="main centered">
+
+        <table>
+            <tr>
+                <td class="label">Select Date</td>
+                <td>
+                  <input type="date" [(ngModel)]="appointmentDate">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Time</td>
+                <td>
+                    <input type="time"  [(ngModel)]="appointmentTime">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Doctor</td>
+                <td>
+                    <input [(ngModel)]="doctorId" value="{{doctorId}}" type="hidden">
+                    {{firstName}} {{lastName}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Patient Name</td>
+                <td>
+                    <input type="text"  [(ngModel)]="patient_name">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Patient Email</td>
+                <td>
+                    <input type="email" name="time"  [(ngModel)]="patient_email">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Age</td>
+                <td>
+                    <input type="number"  [(ngModel)]="age" min="0">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Gender</td>
+                <td>
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="gender"
+                        value="option1" />
+                      <label class="form-check-label" for="gender">Female</label>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="gender"
+                        value="option2" />
+                      <label class="form-check-label" for="gender">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline mb-0">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [(ngModel)]="gender"
+                        value="option3" />
+                      <label class="form-check-label" for="gender">Other</label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+              <td class="label">Patient Phone</td>
+              <td>
+                  <input type="text"  [(ngModel)]="patient_phone">
+              </td>
+          </tr>
+
+          <tr>
+            <td class="label">Address</td>
+            <td>
+                <input type="text"  [(ngModel)]="patient_address">
+            </td>
+        </tr>
+
+        <tr>
+          <td class="label">Problem</td>
+          <td>
+              <textarea  [(ngModel)]="medicalBackground"></textarea>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="centered"> <button (click)="createAppointment()" mat-raised-button  class="btn btn-warning btn-lg ms-2">Create Appointment</button></div>
+        </td>
+      </tr>
+        </table>
+  </div>
+</div>

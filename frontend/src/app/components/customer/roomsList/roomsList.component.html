@@ -1,0 +1,38 @@
+
+<div class="register-tab">
+<div class="container">
+  <h2 class="text-center">Rooms booking list</h2>
+  <div class="float-end" style="margin-bottom: 20px;">
+    <button (click)="routerToLink('/ambulance')" [class.selected]="url === '/ambulance'" class="btn btn-warning btn-lg ms-2">Book Rooms</button>
+  </div>
+  <div *ngIf="rooms.length === 0">
+      No Lab Test currently in your List.
+  </div>
+  <div class="" *ngIf="rooms.length > 0">
+  <table class="table table-bordered table-striped text-center" border="1">
+    <thead>
+      <tr>
+        <th>
+          Contact Person name
+        </th>
+        <th>
+          Contact Person Phone
+        </th>
+        <th>
+          Schedule
+        </th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let room of rooms">
+        <td>{{room?.contact_name}}</td>
+        <td>{{room?.contact_phone}}</td>
+        <td>{{room?.roomsId}}</td>
+        <td>
+          <button (click)="viewDetail(room)">View Detail</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>

@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.grid-style {
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(109, 109, 125, 0.28) 0px 4px 7px 12px;
+}
+.grid-style h2{
+  padding-block-start: 20px;;
+}
+.divider{
+  margin-block-end: 10px;;
+}

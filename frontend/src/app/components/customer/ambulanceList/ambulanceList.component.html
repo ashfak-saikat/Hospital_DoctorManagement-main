@@ -1,0 +1,38 @@
+
+<div class="register-tab">
+  <div class="container">
+    <h2 class="text-center"><br>Ambulance booking list</h2>
+    <div class="float-end" style="margin-bottom: 20px;">
+      <button (click)="routerToLink('/ambulance')" [class.selected]="url === '/ambulance'" class="btn btn-warning btn-lg ms-2">Book Ambulance</button>
+    </div>
+    <div *ngIf="ambulance.length === 0">
+        No Lab Test currently in your List.
+    </div>
+    <div class="" *ngIf="ambulance.length > 0">
+    <table class="table table-bordered table-striped text-center" border="1">
+      <thead>
+        <tr>
+          <th>
+            Contact Person name
+          </th>
+          <th>
+            Contact Person Phone
+          </th>
+          <th>
+            Schedule
+          </th>
+          <th>Action</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doc of ambulance">
+          <td>{{doc?.contact_name}}</td>
+          <td>{{doc?.contact_phone}}</td>
+          <td>{{doc?.ambulanceId}}</td>
+          <td>
+            <button (click)="viewDetail(doc)">View Detail</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>

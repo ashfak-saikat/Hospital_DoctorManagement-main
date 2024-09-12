@@ -1,0 +1,16 @@
+
+<div class="register-tab">
+<div class="container">
+  <h2 class="text-center">Lab Test List</h2>
+  <div class="row">
+    <div *ngFor="let item of labTest" class="col-md-3" >
+      <div class="grid-style" >
+        <h2>{{item?.test_name}}</h2>
+        <p>{{item?.test_sku}}</p>
+        <p>{{item?.price}}</p>
+        <div class="centered"> <button (click)="viewDetail(item)" mat-raised-button  class="btn btn-warning btn-lg ms-2 divider">View Details</button></div><br>
+        <div class="centered"> <button (click)="addToCart(item)" mat-raised-button  class="btn btn-warning btn-lg ms-2">Add To Cart</button></div>
+      </div>
+    </div>
+  </div>
+</div>

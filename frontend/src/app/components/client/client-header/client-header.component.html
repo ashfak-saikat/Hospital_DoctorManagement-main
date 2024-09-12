@@ -1,0 +1,28 @@
+<div class="HMSName">
+  <marquee direction="right" scrollamount="10">
+      <h1>Apollo HOSPITALS</h1>
+  </marquee>
+</div>
+<div class="main">
+  <div><img  src="../../../assets/images/hospital.png" width="10%" height="90%"></div>
+  <div  (click)="routerToLink('')" [class.selected]="url === '/'">Home</div>
+  <div [matMenuTriggerFor]="servicesMenu" class="user-name-item">
+    <div>My Services<mat-icon>expand_more</mat-icon></div>
+  </div>
+  <div (click)="routerToLink('about-us')" [class.selected]="url === '/about-us'">About Us</div>
+  <div (click)="routerToLink('contact-us')" [class.selected]="url === '/contact-us'">Contact Us</div>
+  <div [matMenuTriggerFor]="menu" class="user-name-item"><div>{{userName}}&nbsp;<mat-icon>expand_more</mat-icon></div></div>
+</div>
+
+<mat-menu #servicesMenu="matMenu">
+  <button (click)="routerToLink('/patient/my-appointment')" [class.selected]="url === '/patient/my-appointment'" mat-menu-item>Appointments</button>
+  <button (click)="routerToLink('/customer/ambulance-list')" [class.selected]="url === '/customer/ambulance-list'" mat-menu-item>Ambulances</button>
+  <button (click)="routerToLink('/customer/rooms-list')" [class.selected]="url === '/customer/rooms-list'" mat-menu-item>Rooms</button>
+  <button (click)="routerToLink('/patient/my-prescription')" [class.selected]="url === '/patient/my-prescription'" mat-menu-item>Appointments</button>
+  <button (click)="routerToLink('/patient/my-prescription')" [class.selected]="url === '/patient/my-prescription'" mat-menu-item>Prescriptions</button>
+</mat-menu>
+
+<mat-menu #menu="matMenu">
+  <button (click)="routerToLink('/customer/home')" mat-menu-item><mat-icon>logout</mat-icon> My Home</button>
+  <button (click)="routerToLink('/patient/logout')" mat-menu-item><mat-icon>logout</mat-icon> Logout</button>
+</mat-menu>

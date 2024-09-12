@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="text-center">
+        <h1>Visit Doctors and Get Appointment</h1>
+    </div>
+
+  <div class="row">
+    <div *ngFor="let item of doctor" class="col-md-3" >
+      <div class="grid-style" >
+        <img class="img-thumbnail" src="../../../assets/images/profile_placeholder.png">
+        <h2>{{item?.firstName}} {{item?.lastName}}</h2>
+        <p>{{item?.specialization}}</p>
+        <div class="centered"> <button (click)="viewDoctor(item)" mat-raised-button  class="btn btn-warning btn-lg ms-2 divider">View Details</button></div><br>
+        <div class="centered"> <button (click)="addAppointment(item)" mat-raised-button  class="btn btn-warning btn-lg ms-2">Create Appointment</button></div>
+      </div>
+    </div>
+  </div>
+
+</div>

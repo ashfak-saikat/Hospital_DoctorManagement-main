@@ -1,0 +1,12 @@
+<div class="app">
+  <div class="sidebar expanded">
+    <div class="sidebar-item no-hover ppimage" id="burger">
+      <img  src="../../../assets/images/profile_placeholder.png">
+      <span class="sidebar-item-title">Hi... {{userName}}</span>
+    </div>
+    <div class="sidebar-item active" >Medical Test</div>
+    <div class="sidebar-item" >Medicine</div>
+    <div class="sidebar-item" (click)="routerToLink('/customer/rooms-list')" [class.selected]="url === '/customer/rooms-list'">Room</div>
+    <div class="sidebar-item" (click)="routerToLink('/ambulance-list')" [class.selected]="url === '/customer/ambulance-list'">Ambulance</div>
+  </div>
+</div>
